@@ -6,6 +6,6 @@
 #BSUB -R "rusage[mem=512MB]"
 #BSUB -o sleeper_%J.out
 #BSUB -e sleeper_%J.err
-#BSUB -notify "[exit][start]"
+#BSUB -notify "[exit] [done ] [start]"
 
 sleep 60
