@@ -1,6 +1,5 @@
 
 #!/bin/bash
-
 ### -- job name -- 
 #BSUB -J seleper
 
