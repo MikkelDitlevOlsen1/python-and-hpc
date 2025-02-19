@@ -16,7 +16,7 @@
 #BSUB -e sleeper_%J.err
 
 #--- Select the model of the CPU  can get list by 'nodestat -F hpc'---
-#BSUB -R "select[model ==  Intel Xeon Gold 6126]"
+#BSUB -R "select[model ==  XeonGold6226R]"
 
 #--- print the hardweare you are using ---
 lscpu
