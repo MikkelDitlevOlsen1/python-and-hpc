@@ -2,14 +2,14 @@ import numpy as np
 import time
 import matplotlib.pyplot as plt
 
-sizes = np.logspace(2, 8, num=10, dtype=int)
+sizes = np.logspace(1, 4.5, num=30, dtype=int)
 t1_times=[0]*len(sizes)
 print(t1_times)
 t2_times=[0]*len(sizes)
 
 for n,SIZE in enumerate(sizes):
-    reps = range(100)
-    mat = np.random.rand(1, SIZE)
+    reps = range(1000)
+    mat = np.random.rand(SIZE, SIZE)
 
 
     t1 = time.time()
@@ -38,4 +38,4 @@ plt.ylabel('Performance (MFLOP/s)')
 plt.legend()
 #plt.show()
 
-plt.savefig('plot1_5.png')
+plt.savefig('plot1_4.png')
