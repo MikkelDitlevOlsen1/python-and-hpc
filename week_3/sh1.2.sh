@@ -9,7 +9,7 @@
 #BSUB -W 8
 
 ### -- memory per core  -- 
-#BSUB -R "rusage[mem=4GB]"
+#BSUB -R "rusage[mem=32GB]"
 
 ### -- chagne output name -- 
 #BSUB -o opg1_2_%J.out
