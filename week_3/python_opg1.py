@@ -4,8 +4,9 @@ import matplotlib.pyplot as plt
 
 sizes = np.logspace(1, 4.5, num=10, dtype=int)
 t1_times=[0]*len(sizes)
+print(t1_times)
 t2_times=[0]*len(sizes)
-for i,SIZE in enumerate(sizes):
+for n,SIZE in enumerate(sizes):
     reps = range(1000)
     mat = np.random.rand(SIZE, SIZE)
 
@@ -13,14 +14,14 @@ for i,SIZE in enumerate(sizes):
     for i in reps:
         double_column = 2 * mat[:, 0]
     t1 = time.time() - t1
-    t1_times[i]=t1
+    t1_times[n]=t1
     print(f'SIZE={SIZE}, time t1= {t1}')
 
     t2 = time.time()
     for i in reps:
         double_row = 2 * mat[0, :]
     t2 = time.time() - t2
-    t2_times[i]=t2
+    t2_times[n]=t2
     print(f'SIZE={SIZE}, time t2= {t2}')
 
 
