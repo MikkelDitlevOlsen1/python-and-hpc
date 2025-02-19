@@ -2,7 +2,7 @@ import numpy as np
 import time
 import matplotlib.pyplot as plt
 
-sizes = np.logspace(1, 1.5, num=4, dtype=int)
+sizes = np.logspace(1, 4.5, num=10, dtype=int)
 t1_times=[0]*len(sizes)
 print(t1_times)
 t2_times=[0]*len(sizes)
