@@ -9,7 +9,7 @@
 #BSUB -W 2
 
 ### -- memory per core  -- 
-#BSUB -R "rusage[mem=512MB]"
+#BSUB -R "rusage[mem=4GB]"
 
 ### -- chagne output name -- 
 #BSUB -o sleeper_%J.out
