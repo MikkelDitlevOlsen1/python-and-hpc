@@ -12,8 +12,8 @@
 #BSUB -R "rusage[mem=512MB]"
 
 ### -- chagne output name -- 
-#BSUB -o opg1_2.out
-#BSUB -e opg1_2.err
+#BSUB -o opg1_2_%J.out
+#BSUB -e opg1_2_%J.err
 
 #--- Select the model of the CPU  can get list by 'nodestat -F hpc'---
 #BSUB -R "select[model ==  XeonGold6226R]"
