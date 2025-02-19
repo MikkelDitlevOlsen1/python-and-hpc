@@ -6,7 +6,7 @@
 #BSUB -q hpc
 
 ### -- time -- 
-#BSUB -W 2
+#BSUB -W 8
 
 ### -- memory per core  -- 
 #BSUB -R "rusage[mem=512MB]"
