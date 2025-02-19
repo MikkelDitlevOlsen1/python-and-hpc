@@ -18,6 +18,9 @@
 #--- Select the model of the CPU  can get list by 'nodestat -F hpc'---
 #BSUB -R "select[model ==  XeonGold6226R]"
 
+### -- number of cores -- 
+#BSUB -n 1
+
 #--- print the hardweare you are using ---
 lscpu
 ### -use a specific conda env
