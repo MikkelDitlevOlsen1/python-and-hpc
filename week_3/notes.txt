@@ -1,0 +1,30 @@
+waht is preformans and how to measure
+    wall-clock Time (time it takes to run the code stopwatch)
+        to finde wall-clock Time
+        ```bash
+        t=time()
+        s=sum(x)
+        t=time()-t
+        ``` 
+    
+    CPU time (how much time did the CPU work) a bit lees then wall clock time for singel trhed but more for paralel work
+    
+
+    Flop/s (how fast did the CPU work) (hard to mesarue must look at code)
+        Floting point operations/second 
+        Flops/s = #flops/wall time
+        
+        normaly go time over time doing to mermary haracy (caches)
+
+
+memory herarchies
+    memory is slower then Procesors why we use cache
+ -- caches
+    there can be a lot of catches where l1 is farster then l2 so therefor it slow down when l1 is full it need to use l2
+    a cache is a small mini ram so we can run farster
+    when ever we move stuf from ram or hardisk to cache we move a cahe line (8 bits) it does this aoutmatick if a number is not in cahche it move it to it whit its cache line
+    cache miss if when you look for a number in the cache but its not there (it will then look in l2 if not there look in ram and move it up)
+
+
+    
+ 
