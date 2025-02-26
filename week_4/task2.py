@@ -47,5 +47,5 @@ fname = sys.argv[1]
 print(sys.argv[:])
 points = load_points(fname)
 D = distance_matrix_np(points, points)
-stats = distance_stats(D)
-print(stats)
+#stats = distance_stats(D)
+#print(stats)
