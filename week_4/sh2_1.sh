@@ -27,6 +27,6 @@ lscpu
 source /dtu/projects/02613_2025/conda/conda_init.sh
 conda activate 02613
 
-python -m cProfile -s cumulative ~/Documents/python-and-hpc/week_4/task2. py /dtu/projects/02613_2025/data/locations/locations_500.csv
+python -m cProfile -s cumulative ~/Documents/python-and-hpc/week_4/task2.py /dtu/projects/02613_2025/data/locations/locations_500.csv
 
 ###python  task2.py input.csv 
