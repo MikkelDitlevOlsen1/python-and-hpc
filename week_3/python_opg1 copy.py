@@ -2,14 +2,14 @@ import numpy as np
 import time
 import matplotlib.pyplot as plt
 
-sizes = np.logspace(1, 4.5, num=30, dtype=int)
+sizes = np.logspace(2, 8, num=10, dtype=int)
 t1_times=[0]*len(sizes)
 print(t1_times)
 t2_times=[0]*len(sizes)
 
 for n,SIZE in enumerate(sizes):
-    reps = range(1000)
-    mat = np.random.rand(SIZE, SIZE)
+    reps = range(100)
+    mat = np.random.rand(1, SIZE)
 
 
     t1 = time.time()
@@ -28,8 +28,8 @@ for n,SIZE in enumerate(sizes):
 
 
 sizes_kb = sizes**2 * 8 / 1024  # size of the matrix in kilobytes
-mflops_t1 = [2 * SIZE / t1 for SIZE, t1 in zip(sizes, t1_times)]
-mflops_t2 = [2 * SIZE / t2 for SIZE, t2 in zip(sizes, t2_times)]
+mflops_t1 = [2 * SIZE * 1000 / t1 for SIZE, t1 in zip(sizes, t1_times)]
+mflops_t2 = [2 * SIZE * 1000 / t2 for SIZE, t2 in zip(sizes, t2_times)]
 
 plt.loglog(sizes_kb, mflops_t1, label='Column Doubling')
 plt.loglog(sizes_kb, mflops_t2, label='Row Doubling')
@@ -38,4 +38,4 @@ plt.ylabel('Performance (MFLOP/s)')
 plt.legend()
 #plt.show()
 
-plt.savefig('plot1_4.png')
+plt.savefig('plot1_5.png')
