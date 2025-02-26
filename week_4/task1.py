@@ -36,3 +36,5 @@ def distmat_1d(a,b):
 
 #a=distmat_1d(np.array([1,2]),np.array([3,0.5,1]))
 #print(a)
+
+print(np.array([[1,2,4],[2,3,4]]).shape)
