@@ -25,9 +25,9 @@ def distance_matrix_np(p1, p2):
     #D = np.empty((len(p1), len(p2)))
     dsin2= np.sin(0.5*(p1[:,None]-p2[None]))**2
     print(dsin2.shape)
-    cosprod = np.cos(p1[:, 0]) @ np.cos(p2[:, 0])
+    cosprod = np.cos(p1[:, 0]) * np.cos(p2[:, 0])
     print(cosprod.shape)
-    a= dsin2[:,0]+cosprod*dsin2[:,1]
+    a= dsin2[:,:,0]+cosprod*dsin2[:,:,1]
     print(a.shape)
 
 
