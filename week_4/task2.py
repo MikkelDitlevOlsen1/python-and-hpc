@@ -19,6 +19,13 @@ def distance_matrix(p1, p2):
     D *= 6371  # Earth radius in km
     return D
 
+def distance_matrix_np(p1, p2):
+    p1, p2 = np.radians(p1), np.radians(p2)
+    print(p1.shape, p2.shape)
+   # D = np.empty((len(p1), len(p2)))
+   # dsin2= np.sin(0.5*(p1-p2))**2
+
+    
 def load_points(fname):
     data = np.loadtxt(fname, delimiter=',', skiprows=1, usecols=(1, 2))
     return data     
@@ -39,6 +46,6 @@ def distance_stats(D):
 fname = sys.argv[1]
 print(sys.argv[:])
 points = load_points(fname)
-D = distance_matrix(points, points)
+D = distance_matrix_np(points, points)
 stats = distance_stats(D)
 print(stats)
