@@ -28,5 +28,5 @@ lscpu
 source /dtu/projects/02613_2025/conda/conda_init.sh
 conda activate 02613
 
-python ~/Documents/python-and-hpc/week_5/Task3.py
+python ~/Documents/python-and-hpc/week_5/Task3_2.py
 
