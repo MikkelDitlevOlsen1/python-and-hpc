@@ -30,7 +30,7 @@ if __name__ == "__main__":
     height = 800
     xmin, xmax = -2, 2
     ymin, ymax = -2, 2
-    num_proclist = [2]
+    num_proclist = [2,4,8,16,32]
 
     # Precompute points
     x_values = np.linspace(xmin, xmax, width)
