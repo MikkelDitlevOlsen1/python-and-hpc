@@ -16,7 +16,7 @@ if __name__ == '__main__':
     samples = 1000000
     hits = 0
 
-    n_proc = 10
+    n_proc = 20
     chunk_size = samples//n_proc
     pool = multiprocessing.Pool(n_proc)
     results_async = [pool.apply_async(sample_multiple, (chunk_size,))
