@@ -45,8 +45,12 @@ if __name__ == "__main__":
         runtime=time.time()-st
         time_list[i]=runtime
 
-    plt.plot(time_list,num_proclist) 
-    plt.savefig('test.png', bbox_inches='tight', pad_inches=0)
+    plt.plot(num_proclist, time_list)
+    plt.xlabel('Number of Processes')
+    plt.ylabel('Time (seconds)')
+    plt.title('Mandelbrot Set Generation Time vs Number of Processes')
+    plt.savefig('test.png')
+
     # Save set as image
     #mandelbrot_set = mandelbrot_set.reshape((height, width))
     #plot_mandelbrot(mandelbrot_set)
