@@ -10,6 +10,7 @@
 
 ### -- memory per core  -- 
 #BSUB -R "rusage[mem=4GB]"
+#BSUB -R "span[hosts=1]"
 
 ### -- chagne output name -- 
 #BSUB -o opg2_1_%J.out
@@ -19,7 +20,7 @@
 #BSUB -R "select[model ==  XeonGold6226R]"
 
 ### -- number of cores -- 
-#BSUB -n 4
+#BSUB -n 10
 
 #--- print the hardweare you are using ---
 lscpu
