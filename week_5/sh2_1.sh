@@ -9,7 +9,7 @@
 #BSUB -W 8
 
 ### -- memory per core  -- 
-#BSUB -R "rusage[mem=4GB]"
+#BSUB -R "rusage[mem=1GB]"
 #BSUB -R "span[hosts=1]"
 
 ### -- chagne output name -- 
