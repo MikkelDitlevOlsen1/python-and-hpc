@@ -14,6 +14,7 @@ def mandelbrot_escape_time(c):
 
 def generate_mandelbrot_set(points, num_processes):
     chunk_size =len(points)//num_processes
+    #chunk_size = 1000
     with Pool(num_processes) as pool:
         fu=pool.map(mandelbrot_escape_time, points, chunksize=chunk_size)
     escape_times = np.array(fu)
@@ -30,7 +31,7 @@ if __name__ == "__main__":
     height = 800
     xmin, xmax = -2, 2
     ymin, ymax = -2, 2
-    num_proclist = [2,4,8,16,32]
+    num_proclist = [1,2,4,8,16]
 
     # Precompute points
     x_values = np.linspace(xmin, xmax, width)
@@ -43,13 +44,13 @@ if __name__ == "__main__":
         st=time.time()
         mandelbrot_set = generate_mandelbrot_set(points, num_proc)
         runtime=time.time()-st
-        time_list[i]=runtime
+        time_list[i]=runtime if i == 0 else time_list[0]/runtime
 
     plt.plot(num_proclist, time_list)
     plt.xlabel('Number of Processes')
-    plt.ylabel('Time (seconds)')
+    plt.ylabel('Speedup')
     plt.title('Mandelbrot Set Generation Time vs Number of Processes')
-    plt.savefig('test.png')
+    plt.savefig('speed1.png')
 
     # Save set as image
     #mandelbrot_set = mandelbrot_set.reshape((height, width))
