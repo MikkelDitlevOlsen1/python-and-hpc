@@ -1,0 +1,129 @@
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        46 bits physical, 48 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               32
+On-line CPU(s) list:                  0-31
+Vendor ID:                            GenuineIntel
+Model name:                           Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz
+CPU family:                           6
+Model:                                85
+Thread(s) per core:                   1
+Core(s) per socket:                   16
+Socket(s):                            2
+Stepping:                             7
+BogoMIPS:                             5800.00
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm arat pln pts hwp_epp pku ospke avx512_vnni md_clear flush_l1d arch_capabilities
+Virtualization:                       VT-x
+L1d cache:                            1 MiB (32 instances)
+L1i cache:                            1 MiB (32 instances)
+L2 cache:                             32 MiB (32 instances)
+L3 cache:                             44 MiB (2 instances)
+NUMA node(s):                         2
+NUMA node0 CPU(s):                    0-15
+NUMA node1 CPU(s):                    16-31
+Vulnerability Gather data sampling:   Mitigation; Microcode
+Vulnerability Itlb multihit:          KVM: Mitigation: VMX disabled
+Vulnerability L1tf:                   Not affected
+Vulnerability Mds:                    Not affected
+Vulnerability Meltdown:               Not affected
+Vulnerability Mmio stale data:        Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Reg file data sampling: Not affected
+Vulnerability Retbleed:               Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:   Not affected
+Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                  Not affected
+Vulnerability Tsx async abort:        Mitigation; TSX disabled
+building_id, mean_temp, std_temp, pct_above_18, pct_below_15
+10000, 14.01233878811275, 6.367431059312565, 30.941014791508444, 55.542295034537624
+10009, 11.000135812436373, 5.811144379826625, 16.6712734948236, 74.9723590310584
+10014, 14.744169941950119, 7.037733284673848, 38.26367541377415, 52.80837116508215
+10019, 14.735524480624482, 7.030325006703675, 38.14915412864569, 52.92926826787113
+10029, 10.616037322820358, 6.317331938274926, 18.25563221896085, 74.51301795448481
+10031, 12.507072852890545, 6.278432089100354, 24.044722033998173, 66.39513301711693
+10051, 13.289039951277402, 5.999085063388632, 25.97693550756574, 62.859923608050536
+10053, 11.366493551285709, 6.26121798185875, 19.9510754583921, 72.41052538787024
+10056, 14.220114507861702, 6.179461157398302, 31.763454814173965, 57.06174975667784
+10064, 12.71696893739585, 6.964227784263683, 28.79137124461432, 62.75688345539249
+10075, 15.156939199079357, 6.44052034037085, 39.12088154756647, 47.45605511880576
+10079, 15.094353507626135, 7.313911268349323, 41.90001451870493, 49.44974108309539
+10080, 15.777740694240359, 7.280585752157965, 46.365765006711015, 44.711034476002
+10082, 16.465720758630678, 6.713345052234242, 48.64349722630506, 40.56137689061685
+10083, 15.639247995421403, 7.120808056609733, 44.855518923515284, 45.886354482120744
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 24403883: <runpython> in cluster <dcc> Done
+
+Job <runpython> was submitted from host <n-62-30-8> by user <s204094> in cluster <dcc> at Wed Mar 12 10:57:31 2025
+Job was executed on host(s) <n-62-11-68>, in queue <hpc>, as user <s204094> in cluster <dcc> at Wed Mar 12 10:57:32 2025
+</zhome/9d/6/155534> was used as the home directory.
+</zhome/9d/6/155534/Documents/python-and-hpc/asigment> was used as the working directory.
+Started at Wed Mar 12 10:57:32 2025
+Terminated at Wed Mar 12 10:59:55 2025
+Results reported at Wed Mar 12 10:59:55 2025
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+### -- job name -- 
+#BSUB -J runpython
+
+### -- que -- 
+#BSUB -q hpc
+
+### -- time -- 
+#BSUB -W 8
+
+### -- memory per core  -- 
+#BSUB -R "rusage[mem=16GB]"
+#BSUB -R "span[hosts=1]"
+
+### -- chagne output name -- 
+#BSUB -o opg2_1_%J.out
+#BSUB -e opg2_1_%J.err
+
+#--- Select the model of the CPU  can get list by 'nodestat -F hpc'---
+#BSUB -R "select[model ==  XeonGold6226R]"
+
+### -- number of cores -- 
+#BSUB -n 1
+
+#--- print the hardweare you are using ---
+lscpu
+### -use a specific conda env
+source /dtu/projects/02613_2025/conda/conda_init.sh
+conda activate 02613
+
+time python ~/Documents/python-and-hpc/asigment/test.py 15
+
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   142.85 sec.
+    Max Memory :                                 90 MB
+    Average Memory :                             85.67 MB
+    Total Requested Memory :                     16384.00 MB
+    Delta Memory :                               16294.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   143 sec.
+    Turnaround time :                            144 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <opg2_1_24403883.err> for stderr output of this job.
+
