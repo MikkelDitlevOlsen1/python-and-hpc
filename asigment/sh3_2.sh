@@ -28,5 +28,5 @@ lscpu
 source /dtu/projects/02613_2025/conda/conda_init.sh
 conda activate 02613
 
-python ~/Documents/python-and-hpc/asigment/test.py 2
+python time ~/Documents/python-and-hpc/asigment/test.py 15
 
