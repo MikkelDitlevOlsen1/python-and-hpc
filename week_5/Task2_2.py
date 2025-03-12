@@ -1,6 +1,6 @@
 
 import random
-import multiprocessing
+import multiprocessing 
 
 def sample():
     x = random.uniform(-1.0, 1.0)
@@ -15,6 +15,7 @@ if __name__ == '__main__':
     hits = 0
 
     n_proc = 10
+    
     pool = multiprocessing.Pool(n_proc)
     results_async = [pool.apply_async(sample) for i in range(samples)]
     hits = sum(r.get() for r in results_async)

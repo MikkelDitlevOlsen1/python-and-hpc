@@ -44,7 +44,7 @@ if __name__ == "__main__":
         st=time.time()
         mandelbrot_set = generate_mandelbrot_set(points, num_proc)
         runtime=time.time()-st
-        time_list[i]=runtime if i == 0 else time_list[0]/runtime
+        time_list[i]=1 if i == 0 else time_list[0]/runtime
 
     plt.plot(num_proclist, time_list)
     plt.xlabel('Number of Processes')
