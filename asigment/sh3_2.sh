@@ -9,7 +9,7 @@
 #BSUB -W 8
 
 ### -- memory per core  -- 
-#BSUB -R "rusage[mem=1GB]"
+#BSUB -R "rusage[mem=16GB]"
 #BSUB -R "span[hosts=1]"
 
 ### -- chagne output name -- 
@@ -20,7 +20,7 @@
 #BSUB -R "select[model ==  XeonGold6226R]"
 
 ### -- number of cores -- 
-#BSUB -n 16
+#BSUB -n 1
 
 #--- print the hardweare you are using ---
 lscpu
