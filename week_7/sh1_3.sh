@@ -9,7 +9,7 @@
 #BSUB -W 8
 
 ### -- memory per core  -- 
-#BSUB -R "rusage[mem=1GB]"
+#BSUB -R "rusage[mem=8GB]"
 #BSUB -R "span[hosts=1]"
 
 ### -- chagne output name -- 
@@ -23,7 +23,7 @@
 #BSUB -n 20
 
 #--- print the hardweare you are using ---
-lscpu
+###lscpu
 ### -use a specific conda env
 source /dtu/projects/02613_2025/conda/conda_init.sh
 conda activate 02613
