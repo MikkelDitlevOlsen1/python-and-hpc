@@ -12,13 +12,15 @@ def df_memsize(df):
 # Print the memory size of the dataframe
 print(f"Memory size of the dataframe: {df_memsize(df)} bytes")
 
-# Function to calculate total precipitation how muche
-def total_precip(df):
-    total = 0.0
-    for i in range(len(df)):
-        row = df.iloc[i]
-        if row['parameterId'] == 'precip_past10min':
-            total += row['value']
-    return total
-
-print(f"Total precipitation: {total_precip(df)} mm")
+def summarize_columns(df):
+    print(pd.DataFrame([
+        (
+            c,
+            df[c].dtype,
+            len(df[c].unique()),
+            df[c].memory_usage(deep=True) // (1024**2)
+        ) for c in df.columns
+    ], columns=['name', 'dtype', 'unique', 'size (MB)']))
+    print('Total size:', df.memory_usage(deep=True).sum() / 1024**2, 'MB')
+    
+summarize_columns(df)
